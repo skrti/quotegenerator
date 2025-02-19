@@ -1,0 +1,155 @@
+{
+    "quotegeneratortable": [
+        {
+            "PutRequest": {
+                "Item": {
+                    "greeting_name": {
+                        "S": "Good Morning"
+                    },
+                    "greetingID": {
+                        "N": "1"
+                    },
+                    "quote": {
+                        "S": "Every morning is a new beginning. Take a deep breath, smile, and start again"
+                    }
+                }
+            }
+         },
+         {
+            "PutRequest": {
+                "Item": {
+                    "greeting_name": {
+                        "S": "Good Morning"
+                    },
+                    "greetingID": {
+                        "N": "2"
+                    },
+                    "quote": {
+                        "S": "Good morning! Believe in yourself and make it happen"
+                    }
+                }
+            }
+         },
+         {
+            "PutRequest": {
+                "Item": {
+                    "greeting_name": {
+                        "S": "Good Morning"
+                    },
+                    "greetingID": {
+                        "N": "3"
+                    },
+                    "quote": {
+                        "S": "May your day be filled with good thoughts, kind people, and happy moments"
+                    }
+                }
+            }
+         },
+         {
+            "PutRequest": {
+                "Item": {
+                    "greeting_name": {
+                        "S": "Good Morning"
+                    },
+                    "greetingID": {
+                        "N": "4"
+                    },
+                    "quote": {
+                        "S": "Rise up, start fresh, and see the bright opportunity in each new day"
+                    }
+                }
+            }
+         },
+         {
+            "PutRequest": {
+                "Item": {
+                    "greeting_name": {
+                        "S": "Good Morning"
+                    },
+                    "greetingID": {
+                        "N": "5"
+                    },
+                    "quote": {
+                        "S": "Every morning brings new potential, but it's what we do with it that makes a difference"
+                    }
+                }
+            }
+         },
+         {
+            "PutRequest": {
+                "Item": {
+                    "greeting_name": {
+                        "S": "Good Morning"
+                    },
+                    "greetingID": {
+                        "N": "6"
+                    },
+                    "quote": {
+                        "S": "Good morning! Life is like a mirror: it'll smile at you if you smile at it"
+                    }
+                }
+            }
+         },
+         {
+            "PutRequest": {
+                "Item": {
+                    "greeting_name": {
+                        "S": "Good Morning"
+                    },
+                    "greetingID": {
+                        "N": "7"
+                    },
+                    "quote": {
+                        "S": "Lose an hour in the morning, and you will spend all day looking for it"
+                    }
+                }
+            }
+         },
+         {
+            "PutRequest": {
+                "Item": {
+                    "greeting_name": {
+                        "S": "Good Morning"
+                    },
+                    "greetingID": {
+                        "N": "8"
+                    },
+                    "quote": {
+                        "S": "The best way to start the day is with a grateful heart"
+                    }
+                }
+            }
+         },
+
+         {
+            "PutRequest": {
+                "Item": {
+                    "greeting_name": {
+                        "S": "Good Morning"
+                    },
+                    "greetingID": {
+                        "N": "9"
+                    },
+                    "quote": {
+                        "S": "A beautiful morning starts with a beautiful mindset"
+                    }
+                }
+            }
+         },
+         {
+            "PutRequest": {
+                "Item": {
+                    "greeting_name": {
+                        "S": "Good Morning"
+                    },
+                    "greetingID": {
+                        "N": "10"
+                    },
+                    "quote": {
+                        "S": "Rise up and attack the day with enthusiasm"
+                    }
+                }
+            }
+         }
+    ]
+}
