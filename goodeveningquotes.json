@@ -1,0 +1,156 @@
+{
+    "quotegeneratortable": [
+        {
+            "PutRequest": {
+                "Item": {
+                    "greeting_name": {
+                        "S": "Good Evening"
+                    },
+                    "greetingID": {
+                        "N": "1"
+                    },
+                    "quote": {
+                        "S": "Take a moment tonight to appreciate the loved ones who illuminate your evenings and life"
+                    }
+                }
+            }
+         },
+         {
+            "PutRequest": {
+                "Item": {
+                    "greeting_name": {
+                        "S": "Good Evening"
+                    },
+                    "greetingID": {
+                        "N": "2"
+                    },
+                    "quote": {
+                        "S": "Use tonight to fuel your passion for what's coming next—dream big and dare to follow those dreams"
+                    }
+                }
+            }
+         },
+         {
+            "PutRequest": {
+                "Item": {
+                    "greeting_name": {
+                        "S": "Good Evening"
+                    },
+                    "greetingID": {
+                        "N": "3"
+                    },
+                    "quote": {
+                        "S": "Harness the solitude of the evening to empower your thoughts and actions for tomorrow"
+                    }
+                }
+            }
+         },
+         {
+            "PutRequest": {
+                "Item": {
+                    "greeting_name": {
+                        "S": "Good Evening"
+                    },
+                    "greetingID": {
+                        "N": "4"
+                    },
+                    "quote": {
+                        "S": "As the evening fades, remember that persistence conquers all fears. Keep moving forward"
+                    }
+                }
+            }
+         },
+         {
+            "PutRequest": {
+                "Item": {
+                    "greeting_name": {
+                        "S": "Good Evening"
+                    },
+                    "greetingID": {
+                        "N": "5"
+                    },
+                    "quote": {
+                        "S": "Let the twilight inspire you to push beyond your limits and reach for new heights."
+                    }
+                }
+            }
+         },
+         {
+            "PutRequest": {
+                "Item": {
+                    "greeting_name": {
+                        "S": "Good Evening"
+                    },
+                    "greetingID": {
+                        "N": "6"
+                    },
+                    "quote": {
+                        "S": "Every evening brings a fresh canvas for bold dreams and brave choices"
+                    }
+                }
+            }
+         },
+         {
+            "PutRequest": {
+                "Item": {
+                    "greeting_name": {
+                        "S": "Good Evening"
+                    },
+                    "greetingID": {
+                        "N": "7"
+                    },
+                    "quote": {
+                        "S": "End each day with a hopeful note, looking forward to a fresh start in the morning"
+                    }
+                }
+            }
+         },
+         {
+            "PutRequest": {
+                "Item": {
+                    "greeting_name": {
+                        "S": "Good Evening"
+                    },
+                    "greetingID": {
+                        "N": "8"
+                    },
+                    "quote": {
+                        "S": "Evenings are proof that endings can often be beautiful, too"
+                    }
+                }
+            }
+         },
+
+         {
+            "PutRequest": {
+                "Item": {
+                    "greeting_name": {
+                        "S": "Good Evening"
+                    },
+                    "greetingID": {
+                        "N": "9"
+                    },
+                    "quote": {
+                        "S": "Sunsets are proof that endings can be beautiful too"
+                    }
+                }
+            }
+         },
+         {
+            "PutRequest": {
+                "Item": {
+                    "greeting_name": {
+                        "S": "Good Evening"
+                    },
+                    "greetingID": {
+                        "N": "10"
+                    },
+                    "quote": {
+                        "S": "I had such a wonderful time last night"
+                    }
+                }
+            }
+         }
+        
+    ]
+}
