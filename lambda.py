@@ -1,40 +1,64 @@
 import json
 import boto3
 import random
+import os
+import logging
 from boto3.dynamodb.conditions import Key
 
-def lambda_handler(event, context):
-    client = boto3.resource('dynamodb')
-    table = client.Table('quotegeneratortable')
+# Set up structured logging
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)
 
-    # Parse query string params safely
+# Use environment variable for table name (better for reusability and security)
+TABLE_NAME = os.getenv('QUOTE_TABLE_NAME', 'quotegeneratortable')
+
+dynamodb = boto3.resource('dynamodb')
+table = dynamodb.Table(TABLE_NAME)
+
+def get_random_quote(greeting_name):
+    //"""Query DynamoDB and return a random quote for the given greeting_name."""
+    response = table.query(
+        KeyConditionExpression=Key('greeting_name').eq(greeting_name)
+    )
+    items = response.get('Items', [])
+    if items:
+        return random.choice(items).get('quote', 'No quote available.')
+    else:
+        return None
+
+def lambda_handler(event, context):
+    logger.info("Received event: %s", json.dumps(event))
+
     greeting_name = event.get('queryStringParameters', {}).get('greeting_name', 'Guest')
 
-    try:
-        # Query DynamoDB table
-        response = table.query(
-            KeyConditionExpression=Key('greeting_name').eq(greeting_name)
-        )
-        items = response.get('Items', [])
+    if not isinstance(greeting_name, str) or not greeting_name.strip():
+        return {
+            'statusCode': 400,
+            'body': json.dumps({'error': 'Invalid greeting_name'}),
+            'headers': {'Content-Type': 'application/json'}
+        }
 
-        # Check if items exist and select a random quote
-        if items:
-            selection = random.choice(items)  # Direct selection
-            quote = selection.get('quote', 'No quote available.')
+    try:
+        quote = get_random_quote(greeting_name)
+        if quote:
+            body = {'quote': quote}
+            status_code = 200
         else:
-            quote = "No quotes found for this greeting."
+            body = {'message': f'No quotes found for greeting: {greeting_name}'}
+            status_code = 404
 
     except Exception as e:
-        quote = f"Error fetching quote: {str(e)}"
+        logger.error("Error fetching quote: %s", str(e))
+        return {
+            'statusCode': 500,
+            'body': json.dumps({'error': f'Error fetching quote: {str(e)}'}),
+            'headers': {'Content-Type': 'application/json'}
+        }
 
-    # Construct HTTP response object
-    response_object = {
-        'statusCode': 200,
-        'headers': {'Content-Type': 'application/json'},
-        'body': json.dumps({"quote":quote})
+    return {
+        'statusCode': status_code,
+        'body': json.dumps(body),
+        'headers': {'Content-Type': 'application/json'}
     }
-
-    return response_object
-
 
   
