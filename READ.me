@@ -29,3 +29,11 @@ This project is an AWS Lambda function that serves as a simple **quote generator
 |---------------------|-----------|--------|
 | `greeting_name`     | String    | PK     |
 | `quote`             | String    | Quote  |
+ Each greeting name can have **multiple quotes** associated with it.
+
+Example item:
+```json
+{
+  "greeting_name": "morning",
+  "quote": "Rise and shine! Make today count."
+}
