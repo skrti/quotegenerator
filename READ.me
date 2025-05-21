@@ -1,0 +1,31 @@
+# 🎯 Random Quote Generator (AWS Lambda + DynamoDB)
+
+This project is an AWS Lambda function that serves as a simple **quote generator**. It fetches quotes from a DynamoDB table based on a provided `greeting_name` (e.g., "morning", "birthday") and returns a random quote in response.
+
+---
+
+## 🚀 Features
+
+- Query DynamoDB for quotes based on a greeting name.
+- Select a **random quote** from matching entries.
+- Return the quote in a clean **JSON response**.
+- Graceful error handling.
+
+---
+
+## 🧩 AWS Resources Used
+
+- **Lambda**: Runs the Python function.
+- **DynamoDB**: Stores quotes indexed by `greeting_name`.
+- **API Gateway** (optional): Used to expose Lambda via HTTP endpoint.
+
+---
+
+## 🗃️ DynamoDB Table Schema
+
+**Table Name:** `quotegeneratortable`
+
+| Partition Key       | Attribute | Type   |
+|---------------------|-----------|--------|
+| `greeting_name`     | String    | PK     |
+| `quote`             | String    | Quote  |
