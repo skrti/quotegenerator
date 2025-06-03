@@ -44,7 +44,7 @@ def lambda_handler(event, context):
             body = {'quote': quote}
             status_code = 200
         else:
-            body = {'message': f'No quotes found for greeting: {greeting_name}'}
+            body = {'message': f'No quotes found for greeting: {greeting_name}'}  //error message
             status_code = 404
 
     except Exception as e:
