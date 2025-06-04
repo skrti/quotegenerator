@@ -2,7 +2,7 @@ name: Jira Exporter Workflow
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 */1 * * *' # Runs every hour
+    - cron: '*/5 * * * *' # Runs every hour
 jobs:
   run-integration:
     runs-on: ubuntu-latest
